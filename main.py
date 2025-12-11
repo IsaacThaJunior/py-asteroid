@@ -24,8 +24,11 @@ def main():
                 return
 
         screen.fill("black")
-        player.draw(screen)
-        player.update(dt)
+        # player.draw(screen)
+        updatable.update(dt)
+        # player.update(dt)
+        for sprite in drawable:
+            sprite.draw(screen)
         pygame.display.flip()
 
         new_time.tick(60)
